@@ -32,7 +32,7 @@ export default function Home() {
         </nav>
 
         {/* Hero Section */}
-        <section className="py-20">
+        <section className="bg-white py-20">
           <div className="container mx-auto text-center">
             <h1 className="text-4xl font-bold text-blue-600">Strengthen Your Application with High Test Scores</h1>
             <p className="mt-4 text-gray-700">Increase your scores with a test prep program that gets the results that you want!</p>
