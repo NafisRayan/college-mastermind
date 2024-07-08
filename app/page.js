@@ -1,113 +1,93 @@
-import Image from "next/image";
+// Import necessary components and libraries
+import Head from 'next/head';
+import Link from 'next/link';
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">app/page.js</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
+    <>
+      <Head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>College Mastermind</title>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet" />
+      </Head>
+      <body className="bg-white text-gray-800">
+        {/* Navbar */}
+        <nav className="bg-white shadow-md">
+          <div className="container mx-auto px-6 py-3">
+            <div className="flex justify-between items-center">
+              <div className="text-xl font-bold text-blue-600">College Mastermind</div>
+              <div className="hidden md:flex space-x-6">
+                <Link href="/" className="text-gray-600 hover:text-blue-600">Home</Link>
+                <Link href="/about" className="text-gray-600 hover:text-blue-600">About</Link>
+                <Link href="/services" className="text-gray-600 hover:text-blue-600">Services</Link>
+                <Link href="/countries" className="text-gray-600 hover:text-blue-600">Countries</Link>
+                <Link href="/partnership" className="text-gray-600 hover:text-blue-600">Partnership</Link>
+                <Link href="/events" className="text-gray-600 hover:text-blue-600">Events</Link>
+                <Link href="/contact-us" className="text-gray-600 hover:text-blue-600">Contact Us</Link>
+                <Link href="/register" className="text-blue-600 border border-blue-600 px-4 py-2 rounded-md hover:bg-blue-600 hover:text-white">Login</Link>
+              </div>
+            </div>
+          </div>
+        </nav>
 
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-full sm:before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-full sm:after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px] z-[-1]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
+        {/* Hero Section */}
+        <section className="py-20">
+          <div className="container mx-auto text-center">
+            <h1 className="text-4xl font-bold text-blue-600">Strengthen Your Application with High Test Scores</h1>
+            <p className="mt-4 text-gray-700">Increase your scores with a test prep program that gets the results that you want!</p>
+            <button className="mt-8 bg-blue-600 text-white px-8 py-4 rounded-md hover:bg-blue-700">Book Your Strategy Session</button>
+            <div className="mt-8">
+              <img src="https://source.unsplash.com/random/800x400?education" alt="Students" className="mx-auto rounded-lg shadow-md" />
+            </div>
+          </div>
+        </section>
 
-      <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
+        {/* Success Story Section */}
+        <section className="bg-blue-100 py-12">
+          <div className="container mx-auto px-6">
+            <div className="bg-blue-500 text-white rounded-lg p-8 flex flex-col md:flex-row items-center">
+              <div className="mb-6 md:mb-0">
+                <img src="https://source.unsplash.com/random/150x150?person" alt="Success Story" className="rounded-full shadow-md" />
+              </div>
+              <div className="md:ml-6">
+                <h2 className="text-2xl font-bold">Learn The Strategy Behind Our Success!</h2>
+                <p className="mt-4">College Mastermind had 10 students within the past year score a perfect 36 on the ACT!</p>
+                <p className="mt-2">Want to know how we get such great results? Watch our video!</p>
+                <button className="mt-4 bg-white text-blue-500 px-6 py-2 rounded-md hover:bg-blue-600 hover:text-white">Get Registered Now</button>
+              </div>
+            </div>
+          </div>
+        </section>
 
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800 hover:dark:bg-opacity-30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
+        {/* Stats Section */}
+        <section className="bg-white py-12">
+          <div className="container mx-auto px-6">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
+              <div className="bg-blue-500 text-white p-8 rounded-lg">
+                <h3 className="text-3xl font-bold">100</h3>
+                <p className="mt-2">of high achievers preparing for top 50 universities 2024</p>
+              </div>
+              <div className="bg-blue-500 text-white p-8 rounded-lg">
+                <h3 className="text-3xl font-bold">94%</h3>
+                <p className="mt-2">of our clients get into their top 3 choices in 2023</p>
+              </div>
+              <div className="bg-blue-500 text-white p-8 rounded-lg">
+                <h3 className="text-3xl font-bold">2</h3>
+                <p className="mt-2">Perfect ACT scores in 2022 School Year</p>
+              </div>
+            </div>
+          </div>
+        </section>
 
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Explore starter templates for Next.js.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50 text-balance`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
+        {/* Call to Action Section */}
+        <section className="bg-blue-100 py-12">
+          <div className="container mx-auto text-center">
+            <h2 className="text-2xl font-bold text-gray-700">Don't Settle for Less than Your FULLEST Potential!</h2>
+            <p className="mt-4 text-gray-700">Our test prep curriculum produces results.</p>
+          </div>
+        </section>
+      </body>
+    </>
   );
 }
